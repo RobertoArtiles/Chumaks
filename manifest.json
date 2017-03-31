@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+
+    "name": "Chumaks",
+    "description": "Calculates the approximate delivery price from the US to Ukraine via Nova Poshta",
+    "version": "0.2",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Click here!"
+    },
+    "background": {
+        "scripts": ["hot-reload.js"]
+    },
+    "content_scripts": [{
+        "matches": ["*://www.amazon.com/*"],
+        "js": ["injected.js"],
+        "css": ["injected.css"]
+    }],
+    "web_accessible_resources": [
+        "images/*"
+    ]
+}
